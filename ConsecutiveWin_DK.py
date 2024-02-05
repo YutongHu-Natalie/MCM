@@ -33,4 +33,8 @@ consecutive_rounds= list((game_result[i]-new_game[i]+ 1) for i in range(len(new_
 avg_consecutive_rounds= sum(consecutive_rounds)/len(consecutive_rounds)
 print("average rounds for winning games starting with two consecutive points")
 print(avg_consecutive_rounds)
-
+# regardless of the game results, the average round
+general_rounds_list= list((game_result[i]- new_game[i]) for i in range(len(game_result)))
+avg_general_rounds_list= sum(general_rounds_list)/len(general_rounds_list)
+print("average rounds regardless of the game results")
+print(avg_general_rounds_list)
